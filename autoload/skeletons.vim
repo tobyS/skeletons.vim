@@ -9,6 +9,11 @@ endfunc
 
 func! skeletons#InsertSkeleton()
     let l:filetypematch = matchlist(&ft, '\.\?\([^.]\+\)$')
+    " No file type detected
+    if len(l:filetypematch) < 2
+        return
+    endif
+
     let l:filetype = l:filetypematch[1]
 
     if !has_key(s:skeletons, l:filetype)
