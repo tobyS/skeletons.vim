@@ -31,5 +31,6 @@ func! s:RegisterSkeleton(file)
     if (len(l:matches) < 2)
         return
     endif
+
     let s:skeletons[l:matches[1]] = a:file
 endfunc
