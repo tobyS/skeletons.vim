@@ -1,7 +1,7 @@
 let s:skeletons = {}
 
 func! skeletons#RegisterSkeletons(dir)
-    let l:files = glob(a:dir . "/*", 0, 1)
+    let l:files = split(glob(a:dir . "/*"), "\n")
     for l:file in l:files
         call s:RegisterSkeleton(l:file)
     endfor
