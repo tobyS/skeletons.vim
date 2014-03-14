@@ -22,7 +22,7 @@ func! skeletons#InsertSkeleton()
 
     let l:snippet = join(readfile(s:skeletons[l:filetype]), "\n")
 
-    call UltiSnips_Anon(l:snippet)
+    call UltiSnips#Anon(l:snippet)
 endfunc
 
 func! s:RegisterSkeleton(file)
